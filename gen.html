@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<!-- Создано @Anime_fn00 -->				
+<div align="center"
+<p><b><size4>Нажмите кнопку «Создать», чтобы сгенерировать случайное число от 1 до 1000</size><b></p>
+
+<button onclick="myFunction()">Создать</button>
+
+<table border="1" cellspacingl="10">
+	<tr>				
+			<td> <p id="demo"></p> </td>
+</table> 
+					
+
+<table><script>
+function myFunction() {
+  var x = document.getElementById("demo")
+  x.innerHTML = Math.floor((Math.random() * 1000) + 1);
+}
+</script></table>
+
+</div>
+<p>Какие символы включать в пароль:</p>
+
+<ul class="password__generate">
+	<li><input id="arr_num" type="checkbox" /> Цифры</li>
+	<li><input id="arr_en" type="checkbox" /> Английский строчные буквы</li>
+	<li><input id="arr_EN" type="checkbox" /> Английский заглавные буквы</li>
+	<li><input id="arr_symb" type="checkbox" /> Спецсимволы</li>
+</ul>
+<p>Количество символов в пароле: <input id="passLenght" type="number" step="1" min="4" max="20" value="7" /></p>
+<p>Сгенерированный пароль: <span id="result"></span></p>
+<p><button id="pass_start">Сгенерировать пароль</button></p>
+
+<script> 
+					let arr_num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let arr_en = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+let arr_EN = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+let arr_symb = ['!', '@', '#', '$', '%', '?', '-', '+', '=', '~'];
+
+const compareRandom = ( ) => Math.random() - 0.5;
+
+const randomInteger = ( min, max ) => Math.round(min - 0.5 + Math.random() * (max - min + 1));
+
+function generatePassword() {
+    let arr = [];
+    if (document.querySelector('#arr_num').checked) arr = arr.concat(arr_num);
+    if (document.querySelector('#arr_en').checked) arr = arr.concat(arr_en);
+    if (document.querySelector('#arr_EN').checked) arr = arr.concat(arr_EN);
+    if (document.querySelector('#arr_symb').checked) arr = arr.concat(arr_symb);
+
+    arr.sort(compareRandom);
+
+    let password = '';
+    let passLenght = document.querySelector('#passLenght').value;
+
+    for (let i = 0; i < passLenght; i++) {
+        password += arr[randomInteger(0, arr.length - 1)];
+    }
+
+    document.querySelector('#result').textContent = password;
+}
+
+document.querySelector('#pass_start').addEventListener('click', generatePassword);
+</script>
+
+
+<p>Создано каналом в телеграмме  вот ссылка⬇️</p>
+
+<a href="https://t.me/+HLQz63-YUg9mMGIy">канал</a>
+
+<p>Для работы сайта необходимы средства. Поддержать разработчиков можно отправив любую сумму на один из реквизитов ниже:</p>
+
+<p>Qiwi: +79604961695</p>
+<p>Сбербанка России Карта: 5228600555485624</p>
+<p>Payeer: P1065038935</p>
+
+Важно! В комментарии к платежу укажите, что вы поддерживаете разработчиков Ден</p>
+
+
+</body>
+
+</html>
+
+     
